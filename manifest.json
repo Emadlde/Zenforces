@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ZenForces: Peaceful Codeforces",
+  "version": "1.1",
+  "description": "Hides ratings, ranks, and standings to focus purely on self-improvement.",
+  "permissions": ["storage", "tabs"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://codeforces.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

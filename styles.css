@@ -1,0 +1,33 @@
+/* Give all usernames a sleek, unified "Zen" look */
+a[class*="user-"], span[class*="user-"] {
+    color: #2c3e50 !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+}
+
+/* Ensure the first letter matches perfectly */
+a[class*="user-"]::first-letter, span[class*="user-"]::first-letter {
+    color: #2c3e50 !important; 
+}
+
+/* Add a nice little hover effect */
+a[class*="user-"]:hover {
+    color: #1a252f !important;
+    text-decoration: underline !important;
+}
+
+/* Hide the rank title (e.g., "Expert") above your name on the profile page */
+.user-rank {
+    display: none !important;
+}
+
+/* NUKE THE GRAPH: Actively block the canvas library Codeforces uses */
+.flot-base, 
+.flot-overlay, 
+.legend, 
+.tickLabel,
+#placeholder {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+}
